@@ -47,10 +47,10 @@ for val in "${multi[@]}"; do
 done
 
 # the -i '' is because of mac computers. Might need to delete the '' on a linux machine. 
-sed -i "" 's/<str name=\"uuid\">//g' $id_results
-sed -i "" 's/<title>//g' $id_results
-sed -i "" 's/<\/title>//g' $id_results
-sed -i "" 's/<\/str>//g' $id_results
+sed -i 's/<str name=\"uuid\">//g' $id_results
+sed -i 's/<title>//g' $id_results
+sed -i 's/<\/title>//g' $id_results
+sed -i 's/<\/str>//g' $id_results
 
 
 counter=0
