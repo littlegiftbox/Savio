@@ -16,5 +16,5 @@ if ($#argv != 1) then
 endif
 
 cd $1/raw
-preproc_batch_tops.csh data.in dem.grd
+preproc_batch_tops.csh data.in dem.grd 2 > run.log
 cd ../.. 
