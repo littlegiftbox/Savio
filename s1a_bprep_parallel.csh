@@ -16,6 +16,8 @@ endif
 rm -rf raw_orig
 mkdir raw_orig
 
+rm -f s1a_bprep.cmd
+
 #optional
 #rm -rf F1 F2 F3
 #mkdir F1 F2 F3
@@ -40,11 +42,11 @@ foreach file ($datadir/*.SAFE)
      set filename3=${filename2}${nn}.xml
      echo $filename3
      if ( -e $filename3 ) then
-         echo "cp $file/annotation/*00$nn.xml ." < s1a_bprep.cmd
-         echo "cp $file/measurement/*00$nn.tiff ." < s1a_bprep.cmd
+         echo "cp $file/annotation/*00$nn.xml ." >> s1a_bprep.cmd
+         echo "cp $file/measurement/*00$nn.tiff ." >> s1a_bprep.cmd
      else
-        echo "cp $file/annotation/*00$n.xml ." < s1a_bprep.cmd
-        echo "cp $file/measurement/*00$n.tiff . " < s1a_bprep.cmd
+        echo "cp $file/annotation/*00$n.xml ." >> s1a_bprep.cmd
+        echo "cp $file/measurement/*00$n.tiff . " >> s1a_bprep.cmd
      endif
     end
 end
