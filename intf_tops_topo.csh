@@ -21,12 +21,12 @@
 #
 # read parameters from config file
 #
-  set stage = `grep proc_stage $2 | awk '{print $3}'`
-  set master = `grep master_image $2 | awk '{print $3}'`
-  set topo_phase = `grep topo_phase $2 | awk '{print $3}'`
-  set shift_topo = `grep shift_topo $2 | awk '{print $3}'`
-  set region_cut = `grep region_cut $2 | awk '{print $3}'`
-  set switch_land = `grep switch_land $2 | awk '{print $3}'`
+  set stage = `grep proc_stage $1 | awk '{print $3}'`
+  set master = `grep master_image $1 | awk '{print $3}'`
+  set topo_phase = `grep topo_phase $1 | awk '{print $3}'`
+  set shift_topo = `grep shift_topo $1 | awk '{print $3}'`
+  set region_cut = `grep region_cut $1 | awk '{print $3}'`
+  set switch_land = `grep switch_land $1 | awk '{print $3}'`
 
 ##################################
 # 1 - start from make topo_ra  #
